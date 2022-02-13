@@ -13,11 +13,11 @@
 
 ## Description
 
-A ligthweight communication library over the Arduino framework to make the I2C communication simpler with external IC's like sensors, RTC, ADCs, DACs and many others. Under the hood this library is using the Wire and the Arduino library to deal with the low level communication. Depending on the target device's register size, there are 3 different variations available: 8Bit, 16Bit and 32Bit. Each variation has it's own separate source filse, include the one that your target IC has. (I2C_8Bit.h, I2C_16Bit.h and I2C_32Bit.h) You can include more than one variants if necessary, every variant has it's own unique prefixes.
+A ligthweight communication library over the Arduino framework to make the I2C communication simpler with external IC's like sensors, RTC, ADCs, DACs and many others. Under the hood this library is using the Wire and the Arduino library to deal with the low level communication. Depending on the target device's register size, there are 3 different variations available: 8Bit, 16Bit and 32Bit. Each variation has it's own separate source files, include the one that your target IC has. (I2C_8Bit.h, I2C_16Bit.h and I2C_32Bit.h) You can include more than one variants if necessary, every variant has it's own unique prefixes.
 
 ## Functions
 
-The following functions are available in every variant with the same name, the anly differences are the size of the used register size. and the method prefixes.
+The following functions are available in every variant with the same name, the only differences are the size of the used register size. and the method prefixes.
 
 ### I2C_XXBit_readFromModule
 
@@ -74,7 +74,7 @@ __Full signatures:__
 - uint16_t I2C_8Bit_setBinary(uint16_t binary, uint8_t pos, uint8_t flagVal);
 - uint32_t I2C_8Bit_setBinary(uint32_t binary, uint8_t pos, uint8_t flagVal);
 
-This is a util method which can help with changing a flag's value in a registry value. It will ony change the bit on the given position, so it's ideal to change multiple flags at once. The return value is the updated register value. Important to note, that tthis method will not communicate with the device, the changes are local and only visible on the return value.
+This is a uint method which can help with changing a flag's value in a registry value. It will ony change the bit on the given position, so it's ideal to change multiple flags at once. The return value is the updated register value. Important to note, that this method will not communicate with the device, the changes are local and only visible on the return value.
 
 ## Macros
 
