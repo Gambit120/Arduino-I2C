@@ -17,7 +17,7 @@ A ligthweight communication library over the Arduino framework to make the I2C c
 
 ## Functions
 
-The following functions are available in every variant with the same name, the anly differences are the size of the used register size. and the method prefixes.
+The following functions are available in every variant with the same name, the only differences are the size of the register used and the method prefixes.
 
 ### I2C_XXBit_readFromModule
 
